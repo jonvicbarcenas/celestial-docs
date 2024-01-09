@@ -2,7 +2,7 @@ const express = require('express');
 const axios = require('axios');
 const router = express.Router();
 
-const apiUrl = 'https://chatgayfeyti.archashura.repl.co/';
+const apiUrl = 'https://chatgayfeyti.onrender.com/';
 
 
 router.get('/', async (req, res) => {
