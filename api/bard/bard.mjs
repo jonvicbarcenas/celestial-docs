@@ -12,22 +12,22 @@ const app = express();
 const router = express.Router();
 
 const MY_COOKIE = {
-  "SAPISID": "fRWsdXWt8nzitO0Q/A-fzmiHVdmbDSvSgV",
-  "__Secure-3PAPISID": "fRWsdXWt8nzitO0Q/A-fzmiHVdmbDSvSgV",
-  "_ga": "GA1.1.113706786.1700824333",
-  "NID": "511=dCAVUACL-nOaF9LJbScyF-Y3XLp1pMryZSNA6jGS3mno7Gor1pIEcbxKOQIdd5eSSIezPfe_Q_ciKKjA_uJMmMcv1NP8o6NeaUG_YIwckpOxtrUjTvSAv1cZBlb617l2ToCZ-lWqCVZsoXZhFMVjDEcXqjFngM8XaBzOnI__qQkAznDdlfChUuO6JLIlrPD1uPsdZ9awzCHz7-T9NF-8i4gKeTQpv49TCFkGboSIQ4gqPA",
-  "APISID": "zujnpau-YFR1fVR6/AK19K2Vzz8_GyH3PG",
-  "__Secure-1PAPISID": "fRWsdXWt8nzitO0Q/A-fzmiHVdmbDSvSgV",
-  "__Secure-3PSID": "dQhgDS90ceNUc1ebY-7-LXGVVNK3pf6mI9Jt7fLwPBUOk9XXcnNAanw6B19MpjzA6h6tbg.",
-  "__Secure-1PSID": "dQhgDS90ceNUc1ebY-7-LXGVVNK3pf6mI9Jt7fLwPBUOk9XXKHX4F1m83-0AEKB7V0sOjg.",
-  "__Secure-1PSIDCC": "ACA-OxMHQcbkfhWi6PKAhjQztLJUpXUVkJ_lv7v8XEHZbkqZ2QkzL6_vcZTKamISKTJl1Rz8Rw",
-  "__Secure-3PSIDCC": "ACA-OxNlyrfd3hzcK-vufQZjTI8-J_Pvz713C8_ofzh9zOSn56gVXq7kgEQiqJAcLscQhXnZ",
-  "_ga_WC57KJ50ZZ": "GS1.1.1700824332.1.1.1700824364.0.0.0",
-  "HSID": "Al3_P5wQ43Px_h4Wx",
-  "SID": "dQhgDS90ceNUc1ebY-7-LXGVVNK3pf6mI9Jt7fLwPBUOk9XXug6oZbrOzQorBNHRP20I1Q.",
-  "SIDCC": "ACA-OxPqvFleqoFuq8r1BjW34if1P2XbqiYDXcJIRMTbliwqYAGtyDouiVfSMpOEGq1yiVLM",
-  "SSID": "A5-poxkwN8WO4JQq1"
-};
+    "SAPISID": "xZ-TvW8OWEp5Do3L/AUuNc_YvtSLcDL7ga",
+    "__Secure-3PAPISID": "xZ-TvW8OWEp5Do3L/AUuNc_YvtSLcDL7ga",
+    "_ga": "GA1.1.918815889.1704810749",
+    "NID": "511=UkWZHxh119zD5e9mxDu8KINrcj9OSmE84qX5QNWebzYmGTdXoFXvWZaM7WILsdVupUjxAfFtcsqa-ZwAOxU7P4ziTNzD5_NtAKEAL3rJLvz7SUJhBNz22Eu1A6Azi8Sj79NoZikkF6IOXfXVNWqShVtn8YBOiMasU0_XN067SMTXtHt30yI-Yorj9L6_sW8NImsrbrflzN8VQ2tUSzEWAQ7r3_GPMZt0f2vQ",
+    "APISID": "wJy8F5ooTwmIZu_P/A5dVrTP1uIoofU_bS",
+    "__Secure-1PAPISID": "xZ-TvW8OWEp5Do3L/AUuNc_YvtSLcDL7ga",
+    "__Secure-3PSID": "fAhCmh9SQVgwg9UNm_lqkqK82RAC1C_tCTQWh2hrEFE9gJaBAuri8I1Rxu3LXZMGGI8rZQ.",
+    "__Secure-1PSID": "fAhCmh9SQVgwg9UNm_lqkqK82RAC1C_tCTQWh2hrEFE9gJaBgULTGIk-JyOAFOkiifm70Q.",
+    "__Secure-1PSIDCC": "ABTWhQGUMHjE7Duo9yj8AK53iIeaAK7-Tnqvf_DBntYSvlmOe-ueHBEAluwS84oofdjwyUGE",
+    "__Secure-3PSIDCC": "ABTWhQGwgZG2iWa40FdX0E8xnh8n1zh5u95gofmTzUCHLfbLPMTM-opfYUJXZxxkH0p9vcrByg",
+    "_ga_WC57KJ50ZZ": "GS1.1.1704810749.1.1.1704810806.0.0.0",
+    "HSID": "Ah-FpPiqgb2t8LAdq",
+    "SID": "fAhCmh9SQVgwg9UNm_lqkqK82RAC1C_tCTQWh2hrEFE9gJaBNo49EnX4hp37BXSlSFHNuw.",
+    "SIDCC": "ABTWhQFrLD2qTMTWTCG9LLPuBKCs8Ro2M0LYVZ4ROkNK4oFVkFWG81EmVCT-Bxb7wbRxPPgS",
+    "SSID": "AJhKqbbj587VprLZz"
+  };
 
 
 const myBard = new Bard(MY_COOKIE, {
