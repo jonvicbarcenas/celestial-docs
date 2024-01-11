@@ -14,6 +14,7 @@ const arialFontRouter = require('./api/fontgen/arial');
 const scriptFontRouter = require('./api/fontgen/script');
 const promptgen = require('./api/promptgen/prompter');
 const gemini = require('./api/gemini/gem.js');
+const sentiment = require('./api/sentiment/sent');
 
 //image generation const define
 const generateRouter = require('./api/imagen/generatev3');
@@ -49,6 +50,7 @@ app.use('/arial', arialFontRouter)
 app.use('/script', scriptFontRouter)
 app.use('/prompter', promptgen)
 app.use('/gemini', gemini)
+app.use('/sentiment', sentiment)
 
 import('./api/bard/bard.mjs').then((module) => {
   try {
