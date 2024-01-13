@@ -19,7 +19,7 @@ router.use((req, res, next) => {
 router.get('/', async (req, res) => {
   try {
     const { id, ask, image } = req.query;
-    let url = `https://celestial-dainsleif-docs.archashura.repl.co/bard?id=${id}&ask=${encodeURIComponent(ask)}`;
+    let url = `https://celestial-3ode.onrender.com/bard?id=${id}&ask=${encodeURIComponent(ask)}`;
 
     if (image) {
       url += `&image=${encodeURIComponent(image)}`;
@@ -30,7 +30,7 @@ router.get('/', async (req, res) => {
       response = await axios.get(url);
     } catch (error) {
       if (fallbackToSecondApi) {
-        const secondApiUrl = `https://gptextra.corpselaugh.repl.co/?gpt=${encodeURIComponent(ask)}`;
+        const secondApiUrl = `https://celestial-3ode.onrender.com/gpt?gpt=${encodeURIComponent(ask)}`;
         const secondApiResponse = await axios.get(secondApiUrl);
         res.json(secondApiResponse.data);
       } else {
@@ -59,7 +59,7 @@ router.get('/', async (req, res) => {
 
     if (shouldFallback(response.data)) {
       if (fallbackToSecondApi) {
-        const secondApiUrl = `https://gptextra.corpselaugh.repl.co/?gpt=${encodeURIComponent(ask)}`;
+        const secondApiUrl = `https://celestial-3ode.onrender.com/gpt?gpt=${encodeURIComponent(ask)}`;
         const secondApiResponse = await axios.get(secondApiUrl);
 
         res.json(secondApiResponse.data);
