@@ -12,6 +12,7 @@
   "dependencies": {
     "@google/generative-ai": "^0.1.2",
     "@huggingface/inference": "^2.6.4",
+    "@myno_21/pinterest-scraper": "^1.0.4",
     "@types/node": "^18.0.6",
     "bard-ai": "^2.0.3",
     "cheerio": "^1.0.0-rc.12",

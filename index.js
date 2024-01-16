@@ -80,8 +80,14 @@ import('./api/illusiondiff/illusion.mjs').then((module) => {
 
 
 //image rest api
-app.use('/programeme', progMemeRouter)
-
+import('./api/pinterest/pint.mjs').then((module) => {
+  try {
+    const pinteRouter = module.default;
+    app.use('/pinterest', pinteRouter);
+  } catch (error) {
+    console.error('Error initializing pinterest module:', error.message);
+  }
+});
 
 
 
