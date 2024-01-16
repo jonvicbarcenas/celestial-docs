@@ -21,6 +21,7 @@
     "gpti": "^1.0.9",
     "hercai": "^12.0.0",
     "node-fetch": "^3.2.6",
+    "palm-api": "^1.1.1",
     "replicate": "^0.24.0",
     "swagger-jsdoc": "^6.2.8",
     "swagger-ui-express": "^5.0.0"

@@ -61,6 +61,15 @@ import('./api/bard/bard.mjs').then((module) => {
   }
 });
 
+import('./api/palm/index.mjs').then((module) => {
+  try {
+    const palmRouter = module.default;
+    app.use('/palm', palmRouter);
+  } catch (error) {
+    console.error('Error initializing Bard AI module:', error.message);
+  }
+});
+
 
 
 
