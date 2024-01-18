@@ -22,7 +22,7 @@ router.get("/", async (req, res) => {
 
     try {
         const context = await fs.readFile(CONTEXT_FILE_PATH, "utf-8");
-
+  
         let chat = bot.createChat({
             model: "chat-bison-001",
             temperature: 1.0,
@@ -30,16 +30,30 @@ router.get("/", async (req, res) => {
             top_k: 40,
             context,
         });
-
+  
         chat.ask(modifiedPrompt, {
             format: PaLM.FORMATS.JSON,
         }).then(response => {
+            // Check if the response is valid
+            if (!response || typeof response !== 'object') {
+                throw new Error(`Invalid response format. Got ${typeof response} instead of object.`);
+            }
+  
             res.json(response);
+        }).catch(error => {
+            console.error("Error in PaLM API response:", error);
+            res.status(500).json({ error: "Internal server error. Please try again later." });
         });
     } catch (error) {
         console.error("Error reading context file:", error);
-        res.json({ error: "Internal server error. Please try again later." });
+        res.status(500).json({ error: "Internal server error. Please try again later." });
     }
+});
+
+// Error handling middleware
+app.use((err, req, res, next) => {
+    console.error("Unhandled error:", err);
+    res.status(500).json({ error: "Internal server error. Please try again later." });
 });
 
 export default router;
