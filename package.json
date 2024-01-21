@@ -19,7 +19,7 @@
     "cors": "^2.8.5",
     "express": "^4.18.2",
     "gpti": "^1.0.9",
-    "hercai": "^12.0.1",
+    "hercai": "^12.1.0",
     "node-fetch": "^3.2.6",
     "palm-api": "^1.1.1",
     "replicate": "^0.24.0",
