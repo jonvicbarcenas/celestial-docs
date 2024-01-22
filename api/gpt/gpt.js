@@ -2,8 +2,7 @@ const express = require('express');
 const axios = require('axios');
 const router = express.Router();
 
-const apiUrl = 'https://chatgayfeyti.onrender.com/';
-
+const apiUrl = 'https://chatgayfeyti2.onrender.com/';
 
 router.get('/', async (req, res) => {
   try {
@@ -20,7 +19,9 @@ router.get('/', async (req, res) => {
     res.json({ content });
   } catch (error) {
     console.error('Error fetching data:', error);
-    res.status(500).json({ error: 'Internal Server Error' });
+
+    // Customize the error response
+    res.status(200).json({ content: '!!ChatGPT ERR!!\nContact "JV Barcenas" on Facebook to fix this error' });
   }
 });
 
