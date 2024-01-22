@@ -51,14 +51,14 @@ app.use('/script', scriptFontRouter)
 app.use('/prompter', promptgen)
 app.use('/gemini', gemini)
 app.use('/sentiment', sentiment)
-/*import('./api/bard/bard.mjs').then((module) => {
+import('./api/bard/bard.mjs').then((module) => {
   try {
     const bardRouter = module.default;
     app.use('/bard', bardRouter);
   } catch (error) {
     console.error('Error initializing Bard AI module:', error.message);
   }
-});*/
+});
 
 import('./api/palm/index.mjs').then((module) => {
   try {
