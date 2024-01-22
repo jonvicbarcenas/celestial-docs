@@ -30,7 +30,7 @@ router.get('/', async (req, res) => {
       response = await axios.get(url);
     } catch (error) {
       if (fallbackToSecondApi) {
-        const secondApiUrl = `https://celestial-3ode.onrender.com/gpt?gpt=${encodeURIComponent(ask)}`;
+        const secondApiUrl = `https://celestial-dainsleif.onrender.com/gpt?gpt=${encodeURIComponent(ask)}`;
         const secondApiResponse = await axios.get(secondApiUrl);
         res.json(secondApiResponse.data);
       } else {
@@ -59,7 +59,7 @@ router.get('/', async (req, res) => {
 
     if (shouldFallback(response.data)) {
       if (fallbackToSecondApi) {
-        const secondApiUrl = `https://celestial-3ode.onrender.com/gpt?gpt=${encodeURIComponent(ask)}`;
+        const secondApiUrl = `https://celestial-dainsleif.onrender.com/gpt?gpt=${encodeURIComponent(ask)}`;
         const secondApiResponse = await axios.get(secondApiUrl);
 
         res.json(secondApiResponse.data);
