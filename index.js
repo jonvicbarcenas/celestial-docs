@@ -15,6 +15,7 @@ const scriptFontRouter = require('./api/fontgen/script');
 const promptgen = require('./api/promptgen/prompter');
 const gemini = require('./api/gemini/gem.js');
 const sentiment = require('./api/sentiment/sent');
+const caiScara = require('./api/cai/scara');
 
 //image generation const define
 const generateRouter = require('./api/imagen/generatev3');
@@ -68,7 +69,7 @@ import('./api/palm/index.mjs').then((module) => {
     console.error('Error initializing Bard AI module:', error.message);
   }
 });
-
+app.use('/scara', caiScara);
 
 
 
