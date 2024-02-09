@@ -7,7 +7,6 @@ const options = require('./option/option');
 //text generation
 const gitiRouter = require('./api/gitiai/giti');
 const gptRouter = require('./api/gpt/gpt');
-const bardRouterPromise = import('./api/bard/bard.mjs');
 const bardgptRouter = require('./api/bard-gpt/bardgpt');
 const monoFontRouter = require('./api/fontgen/monospace');
 const arialFontRouter = require('./api/fontgen/arial');
