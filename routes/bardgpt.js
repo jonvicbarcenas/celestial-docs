@@ -3,7 +3,7 @@
  * /bardgpt:
  *   get:
  *     tags:
- *      - AI API
+ *      - MAINTENANCE
  *     summary: Returns data from the Bard or gpt ai.
  *     parameters:
  *       - in: query

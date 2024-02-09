@@ -6,7 +6,7 @@ const router = express.Router();
  * /bard:
  *   get:
  *     tags:
- *      - AI API
+ *      - MAINTENANCE
  *     summary: Returns data from the Bard google ai.
  *     parameters:
  *       - in: query
