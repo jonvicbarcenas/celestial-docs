@@ -7,7 +7,7 @@
  *     summary: Sentiment your message with emoji.
  *     parameters:
  *       - in: query
- *         name: iyot
+ *         name: sentiment
  *         required: true
  *         schema:
  *           type: string

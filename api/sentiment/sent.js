@@ -5,10 +5,10 @@ const app = express();
 const router = express.Router();
 
 router.get("/", async (req, res) => {
-  const gptQuery = req.query.iyot;
+  const gptQuery = req.query.sentiment;
 
   if (!gptQuery) {
-    res.status(400).json({ error: 'Please provide a valid "iyot" parameter.' });
+    res.status(400).json({ error: 'Please provide a valid "sentiment" parameter.' });
     return;
   }
 
