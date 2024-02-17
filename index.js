@@ -75,6 +75,7 @@ app.use('/scara', caiScara);
 //image generation
 app.use('/imagenv3', generateRouter)
 app.use('/prodia', prodiaRouter)
+app.use('/programeme', progMemeRouter)
 import('./api/illusiondiff/illusion.mjs').then((module) => {
   try {
     const illusionRouter = module.default;

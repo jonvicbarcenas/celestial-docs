@@ -6,7 +6,7 @@
  * /programeme:
  *   get:
  *     tags:
- *      - MAINTENANCE
+ *      - Rest API
  *     summary: Programming Memes API
  *     responses:
  *       '200':
