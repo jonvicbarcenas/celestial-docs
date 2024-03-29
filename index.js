@@ -1,5 +1,6 @@
 const express = require('express');
 const path = require('path');
+const cors = require('cors');
 const swaggerJsdoc = require('swagger-jsdoc');
 const swaggerUi = require('swagger-ui-express');
 const options = require('./option/option');
@@ -75,7 +76,9 @@ app.use('/scara', caiScara);
 //image generation
 app.use('/imagenv3', generateRouter)
 app.use('/prodia', prodiaRouter)
-app.use('/programeme', progMemeRouter)
+app.use('/programeme', cors(), progMemeRouter)
+
+
 import('./api/illusiondiff/illusion.mjs').then((module) => {
   try {
     const illusionRouter = module.default;

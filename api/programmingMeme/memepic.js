@@ -6,6 +6,7 @@ const cors = require('cors');
 const app = express();
 const router = express.Router();
 
+// Use CORS middleware
 app.use(cors());
 
 router.get('/', async (req, res) => {
