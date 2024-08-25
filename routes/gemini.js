@@ -1,17 +1,24 @@
 /**
  * @swagger
- * /gemini:
+ * /gem:
  *   get:
  *     tags:
  *       - AI API
  *     summary: Chat with Gemini.
  *     parameters:
  *       - in: query
- *         name: gemini
+ *         name: chat
  *         required: true
  *         schema:
  *           type: string
- *         description: Gemini parameter.
+ *         description: Chat parameter.
+ *       - in: query
+ *         name: id
+ *         required: true
+ *         schema:  
+ *           type: string
+ *         description: ID parameter.
+ * 
  *     responses:
  *       200:
  *         description: Successful response.

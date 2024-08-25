@@ -13,7 +13,6 @@ const monoFontRouter = require('./api/fontgen/monospace');
 const arialFontRouter = require('./api/fontgen/arial');
 const scriptFontRouter = require('./api/fontgen/script');
 const promptgen = require('./api/promptgen/prompter');
-const gemini = require('./api/gemini/gem.js');
 const sentiment = require('./api/sentiment/sent');
 const caiScara = require('./api/cai/scara');
 
@@ -50,7 +49,6 @@ app.use('/monospace', monoFontRouter)
 app.use('/arial', arialFontRouter)
 app.use('/script', scriptFontRouter)
 app.use('/prompter', promptgen)
-app.use('/gemini', gemini)
 app.use('/sentiment', sentiment)
 /*import('./api/bard/bard.mjs').then((module) => {
   try {
@@ -69,6 +67,16 @@ import('./api/palm/index.mjs').then((module) => {
     console.error('Error initializing Bard AI module:', error.message);
   }
 });
+
+import('./api/gemini/gem.mjs').then((module) => {
+  try {
+    const palmRouter = module.default;
+    app.use('/gem', palmRouter);
+  } catch (error) {
+    console.error('Error initializing Bard AI module:', error.message);
+  }
+});
+
 app.use('/scara', caiScara);
 
 
